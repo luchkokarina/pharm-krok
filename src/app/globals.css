@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+:root {
+--background: #F5F0E9;
+--foreground: #65574F;
+--surface: #FFFCF8;
+--surface-secondary: #EAE1D7;
+--accent: #A8B5A0;
+--accent-strong: #788C72;
+--pink: #D9B9B7;
+--border: #E2D7CC;
+--muted: #92847A;
+}
+
+[data-theme="dark"] {
+--background: #211B19;
+--foreground: #E9DDD0;
+--surface: #302723;
+--surface-secondary: #40332D;
+--accent: #A9B39D;
+--accent-strong: #BEC9B0;
+--pink: #B88F91;
+--border: #493B34;
+--muted: #B1A095;
+}
+
+*{
+box-sizing: border-box;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+margin: 0;
+background: var(--background);
+color: var(--foreground);
+font-family: Arial, Helvetica, sans-serif;
+transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+button,
+a {
+-webkit-tap-highlight-color: transparent;
+}
+
+button {
+cursor: pointer;
+}
+
+::selection {
+background: var(--pink);
+color: #ffffff;
+}
+
+/* Таблиці в теоретичних розділах */
+.theory-table-wrap {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  align-self: stretch;
+  overflow-x: auto;
+  box-sizing: border-box;
+}
+
+.theory-table {
+  width: 100%;
+  min-width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.theory-table th,
+.theory-table td {
+  padding: 14px 16px;
+  text-align: left;
+  vertical-align: middle;
+  overflow-wrap: break-word;
+  border: 1px solid var(--border);
+}
+
+.theory-table th {
+  font-weight: 700;
+  background: var(--surface-secondary);
+}
+
+.theory-table td {
+  background: var(--surface);
+}
